@@ -135,7 +135,9 @@ class IssuesController < ApplicationController
   # Add a new issue
   # The new issue will be created from an existing one if copy_from parameter is given
   def new
+    # Nullify the constants from models to hold project name when saving file location on disk, defined in the application controller
     nullify_project_constants
+    # Storing the name of the project associated with this issue in a constant in the Issue model so that the file can be saved project wise
     Issue::ISSUE_PROJECT.replace @issue.project.name
     respond_to do |format|
       format.html { render :action => 'new', :layout => !request.xhr? }

@@ -38,7 +38,6 @@ class FilesController < ApplicationController
 
   def new
     @versions = @project.versions.sort
-    debugger
   end
 
   def create

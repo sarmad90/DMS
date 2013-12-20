@@ -315,8 +315,6 @@ class Attachment < ActiveRecord::Base
 
   # Returns the subdirectory in which the attachment will be saved
   def target_directory
-    # time = created_on || DateTime.now
-    # time.strftime("%Y/%m")
     #IMPORTANT!!
     #author.mail
     directory=nil
@@ -327,7 +325,6 @@ class Attachment < ActiveRecord::Base
       directory = directory || Issue::ISSUE_PROJECT unless Issue::ISSUE_PROJECT==""
     end
     directory = "Global" if directory==nil
-    debugger
     directory
   end
 

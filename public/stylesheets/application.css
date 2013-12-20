@@ -11,7 +11,7 @@ h4 {border-bottom: 1px dotted #bbb;}
 /***** Layout *****/
 #wrapper {background: white;}
 
-#top-menu {background: #3E5B76; color: #fff; height:1.8em; font-size: 0.8em; padding: 2px 2px 0px 6px;}
+#top-menu {background: #00AEEE; color: #fff; height: 22px; font-size: 11px; padding: 8px 2px 0px 6px;}
 #top-menu ul {margin: 0;  padding: 0;}
 #top-menu li {
   float:left;
@@ -28,9 +28,9 @@ h4 {border-bottom: 1px dotted #bbb;}
 #header {min-height:5.3em;margin:0;background-color:#628DB6;color:#f8f8f8; padding: 4px 8px 20px 6px; position:relative;}
 #header a {color:#f8f8f8;}
 #header h1 a.ancestor { font-size: 80%; }
-#quick-search {float:right;}
+#quick-search {float:right; margin-right: 40px;}
 
-#main-menu {position: absolute;  bottom: 0px;  left:6px; margin-right: -500px;}
+#main-menu { bottom: 0px;  left:6px; margin-right: -500px;}
 #main-menu ul {margin: 0;  padding: 0;}
 #main-menu li {
   float:left;
@@ -1157,4 +1157,38 @@ h2 img { vertical-align:middle; }
   width:1px;
   height:1px;
   overflow:hidden;
+}
+
+.comstar-header{
+  min-width: 100%;
+  max-width: 100%;
+  background-image: url('../images/header-back.png');
+  background-position: left;
+  background-repeat: no-repeat;
+  background-size: 24%;
+  height: 83px;
+  z-index: 1000;
+  background-color: #00AEEE;
+}
+.main-header-background {
+  background: url('../images/lines2.png');
+  float: right;
+  margin-right: -12px;
+  margin-top: -46px;
+  width: 137px;
+  height: 89px;
+}
+.logo {
+  background: url('../images/main-logo.png');
+  background-repeat: no-repeat;
+  width: 200px;
+  height: 64px;
+  margin-top: 6px;
+  margin-left: 20px;
+  float: left;
+}
+#comstar-title{
+  color: #FFFFFF;
+  font-size: 23px;
+  font-weight: lighter;
 }
