@@ -11,7 +11,8 @@ function addFile(inputEl, file, eagerUpload) {
 
     fileSpan.append(
         $('<input>', { type: 'text', 'class': 'filename readonly', name: 'attachments[' + attachmentId + '][filename]', readonly: 'readonly'} ).val(file.name),
-        $('<input>', { type: 'text', 'class': 'description', name: 'attachments[' + attachmentId + '][description]', maxlength: 255, placeholder: $(inputEl).data('description-placeholder') } ).toggle(!eagerUpload),
+        //$('<input>', { type: 'text', 'class': 'description', name: 'attachments[' + attachmentId + '][description]', maxlength: 255, placeholder: $(inputEl).data('description-placeholder') } ).toggle(!eagerUpload),
+        $('<input>', { type: 'text', 'class': 'description', name: 'attachments[' + attachmentId + '][description]', maxlength: 255, placeholder: 'Optional physical location' } ).toggle(!eagerUpload),
         $('<a>&nbsp</a>').attr({ href: "#", 'class': 'remove-upload' }).click(removeFile).toggle(!eagerUpload)
     ).appendTo('#attachments_fields');
 
@@ -93,7 +94,7 @@ function uploadBlob(blob, uploadUrl, attachmentId, options) {
   var project = $('#attachments_project').val();
   var attachment_identifier = $('#attachment_identifier').val();
   var attachment_project = $('#attachment_project').val();
-  
+
   // if ($('#attachment_identifier').val()=="is_file")
   // {
   //   var project= $('#attachments_project').val();

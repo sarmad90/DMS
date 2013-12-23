@@ -71,7 +71,6 @@ class AttachmentsController < ApplicationController
     if params[:attachment_identifier]== "is_file"
       @project=Project.find(params[:project])
       @attachment.container_type="Project"
-      debugger
       @attachment.container_id=@project.id
     end
     # MY CODE
