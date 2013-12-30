@@ -53,9 +53,9 @@ if File.exist?(database_file)
       when /postgresql/
         gem "pg", ">= 0.11.0", :platforms => [:mri, :mingw]
         gem "activerecord-jdbcpostgresql-adapter", :platforms => :jruby
-      when /sqlite3/
-        gem "sqlite3", :platforms => [:mri, :mingw]
-        gem "activerecord-jdbcsqlite3-adapter", :platforms => :jruby
+      # when /sqlite3/
+      #   gem "sqlite3", :platforms => [:mri, :mingw]
+      #   gem "activerecord-jdbcsqlite3-adapter", :platforms => :jruby
       when /sqlserver/
         gem "tiny_tds", "~> 0.5.1", :platforms => [:mri, :mingw]
         gem "activerecord-sqlserver-adapter", :platforms => [:mri, :mingw]
