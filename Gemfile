@@ -87,6 +87,11 @@ group :test do
 end
 
 gem 'rails_12factor', group: :production
+gem 'activerecord-jdbcmysql-adapter', group: :production
+gem 'activerecord-jdbcpostgresql-adapter', group: :production
+gem "mysql2", "~> 0.3.11", group: :production
+gem "pg", ">= 0.11.0", group: :production
+
 
 local_gemfile = File.join(File.dirname(__FILE__), "Gemfile.local")
 if File.exists?(local_gemfile)
