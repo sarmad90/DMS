@@ -86,6 +86,8 @@ group :test do
   end
 end
 
+gem 'rails_12factor', group: :production
+
 local_gemfile = File.join(File.dirname(__FILE__), "Gemfile.local")
 if File.exists?(local_gemfile)
   puts "Loading Gemfile.local ..." if $DEBUG # `ruby -d` or `bundle -v`
@@ -98,3 +100,5 @@ Dir.glob File.expand_path("../plugins/*/Gemfile", __FILE__) do |file|
   #TODO: switch to "eval_gemfile file" when bundler >= 1.2.0 will be required (rails 4)
   instance_eval File.read(file), file
 end
+
+ruby '2.0.0'
